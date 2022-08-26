@@ -16,7 +16,7 @@ jobs:
     
     strategy:
       matrix:
-        java-version: [ '8' ]
+        java-version: [ '1.8' ]
 
     steps:
     - uses: actions/checkout@v3
@@ -45,9 +45,13 @@ jobs:
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
-        java-version: '8'
+        java-version: '1.8'
+        server-id: 'github'
+        server-username: GITHUB_USER
+        server-password: GITHUB_TOKEN
 
     - name: Publish SNAPSHOT to GitHub Packages from settings.xml
-      run: mvn -B deploy -DskipTests
+      run: mvn -B -Pgithub deploy -DskipTests
       env:
+        GITHUB_USER: ${{ secrets.GIT_USERNAME }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

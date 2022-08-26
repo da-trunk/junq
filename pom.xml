@@ -228,6 +228,11 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
 				<version>3.2.1</version>
 				<executions>
@@ -281,13 +286,13 @@
 	</build>
 	<distributionManagement>
 		<snapshotRepository>
-			<id>github-snapshot</id>
-			<name>GitHub Packages</name>
+			<id>github</id>
+			<name>da-trunk</name>
 			<url>https://maven.pkg.github.com/da-trunk/junq</url>
 		</snapshotRepository>
 		<repository>
 			<id>github</id>
-			<name>GitHub Packages</name>
+			<name>da-trunk</name>
 			<url>https://maven.pkg.github.com/da-trunk/junq</url>
 		</repository>
 	</distributionManagement>
