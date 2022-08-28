@@ -55,3 +55,10 @@ jobs:
       env:
         GITHUB_USER: ${{ secrets.GIT_USER }}
         GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        
+    - uses: actions/delete-package-versions@v3
+      with: 
+        package-version-ids: 0.1-SNAPSHOT
+        # package-name: 'test-package'
+        min-versions-to-keep: 1
+        delete-only-pre-release-versions: "true"        
