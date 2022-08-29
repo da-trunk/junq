@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.da-trunk</groupId>
 	<artifactId>junq</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<url>https://github.com/da-trunk/junq</url>
 	<description>Type Unsafe LINQ for Java</description>
@@ -22,7 +22,7 @@
 		<lombok.version>1.18.22</lombok.version>
 	</properties>
 	<dependencyManagement>
-		<dependencies></dependencies>
+		<dependencies />
 	</dependencyManagement>
 	<dependencies>
 		<dependency>
@@ -220,7 +220,7 @@
 								<goal>check</goal>
 							</goals>
 							<configuration>
-								<rules></rules>
+								<rules />
 							</configuration>
 						</execution>
 					</executions>
@@ -357,7 +357,8 @@
 		<connection>scm:git:git://github.com/da-trunk/junq.git</connection>
 		<developerConnection>scm:git:ssh://github.com:da-trunk/junq.git</developerConnection>
 		<url>http://github.com/da-trunk/junq/tree/master</url>
-	</scm>
+	  <tag>0.0.1</tag>
+  </scm>
 	<developers>
 		<developer>
 			<id>da-trunk</id>
