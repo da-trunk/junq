@@ -26,7 +26,7 @@ body:
     validations:
       required: false
   - type: dropdown
-    id: database platform
+    id: db-platform
     attributes:
       label: Which database platform(s) would this feature need to support?
       multiple: true
@@ -54,10 +54,10 @@ body:
     validations:
       required: false
   - type: textarea
-      id: implementation
-      attributes:
-        label: implementation
-        description: Implementation ideas
-        render: shell
+    id: implementation
+    attributes:
+      label: implementation
+      description: Implementation ideas
+      render: shelll
     validations:
       required: false
