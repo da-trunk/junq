@@ -10,12 +10,12 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: checkboxes
-    id: feature
+    id: new-request
     attributes:
-      label: Feature Request
-      description: Have an idea for a feature?  Please submit a [feature request].  If the feature you want has already been submitted, vote for it at [canny](https://da-trunk.canny.io/).
+      label: Bug Report
+      description: I have searched issues and this bug report does not already exist.  If this is not a bug report, please [choose a different issue](https://github.com/da-trunk/junq/issues/new/choose).
       options:
-        - label: This is not a feature request
+        - label: This is a bug that has not been previously reported.
     validations:
       required: true        
   - type: input

@@ -10,13 +10,13 @@ body:
       value: |
         Thanks!
   - type: checkboxes
-    id: feature
+    id: new-request
     attributes:
-      label: Feature Request
-      description: If this is a bug, discussion or question, please [choose a different issue](https://github.com/da-trunk/junq/issues/new/choose).
+      label: New Request
+      description: I have searched issues and this one does not already exist.  If the feature you want has already been submitted, cancel this and vote for your feature at [canny](https://da-trunk.canny.io/).  If this is not a feature request, please [choose a different issue](https://github.com/da-trunk/junq/issues/new/choose).
       options:
-        - label: This is a feature request
-          required: true        
+        - label: This is a new feature request.
+          required: true
   - type: input
     id: contact
     attributes:
