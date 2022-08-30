@@ -1,0 +1,63 @@
+name: Feature Request
+description: ... an enhancement
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks!
+  - type: checkboxes
+    id: feature
+    attributes:
+      label: Feature Request
+      description: If this is a bug, discussion or question, please [choose a different issue](https://github.com/da-trunk/junq/issues/new/choose).
+      options:
+        - label: This is a feature request
+          required: true        
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: me@gmail.com
+    validations:
+      required: false
+  - type: dropdown
+    id: database platform
+    attributes:
+      label: Which database platform(s) would this feature need to support?
+      multiple: true
+      options:
+        - Oracle 11g
+        - Oracle 21xe
+        - MySQL
+        - PostgreSQL
+        - H2
+        - Other (please specify)
+  - type: textarea
+    id: description
+    attributes:
+      label: description
+      description: Describe the feature and the benefit it brings.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: alternatives
+      description: List any alternatives and their advantages and disadvantages.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+      id: implementation
+      attributes:
+        label: implementation
+        description: Implementation ideas
+        render: shell
+    validations:
+      required: false

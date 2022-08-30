@@ -1,0 +1,90 @@
+name: Bug Report
+description: ... it's busted
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: checkboxes
+    id: feature
+    attributes:
+      label: Feature Request
+      description: Have an idea for a feature?  Please submit a [feature request].  If the feature you want has already been submitted, vote for it at [canny](https://da-trunk.canny.io/).
+      options:
+        - label: This is not a feature request
+          required: true        
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: me@gmail.com
+    validations:
+      required: false
+        Please start by going through the following checklist.
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 0.1-SNAPSHOT
+    validations:
+      required: true
+  - type: dropdown
+    id: database platform
+    attributes:
+      label: What database platform are you seeing the problem on?
+      multiple: true
+      options:
+        - Oracle 11g
+        - Oracle 21xe
+        - MySQL
+        - PostgreSQL
+        - H2
+        - Other
+  - type: input
+    id: jdk
+    attributes:
+      label: JDK version
+      description: What version of java were you running?
+      multiple: false
+      placeholder: 17.0.2
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What happened?
+      placeholder: Describe the current state.
+      value: "bad stuff"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What should happen?
+      description: What did you expect to happen?
+      placeholder: Tell us your wishes!
+      value: "good stuff"
+    validations:
+      required: true
